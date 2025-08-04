@@ -1,30 +1,29 @@
-# HashGait observability dashboard
+Objective
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Our project, HashGait, aims to revolutionize user authentication by leveraging behavioral biometrics — specifically, unique gait patterns, touch interactions, and device motion signatures — as a seamless and continuous layer of identity verification. By converting real-time sensor data into deterministic cryptographic hashes (e.g., SHA-256), we create a lightweight yet robust “behavioral fingerprint” of each user that can be securely verified on the backend.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/drushti-surkars-projects/v0-hash-gait-observability-dashboard)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/a1XqKn8kD2N)
+The objective is to build an end-to-end system that includes: • A mobile app to capture behavioral data using built-in smartphone sensors. • A Node.js backend for processing, hashing, and validating gait data. • Integration with an ICP backend (Internet Computer Protocol) for advanced pattern storage, confidence scoring, and blockchain-based trust. • A modern dashboard to visualize user authentication flows and backend performance.
 
-## Overview
+⸻
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+Methodology
 
-## Deployment
+We follow a hybrid architecture combining mobile data capture, backend processing, and cryptographic verification: 1. Data Capture: The mobile app uses accelerometer, gyroscope, and touch input events to collect real-time behavioral signals. 2. Behavioral Hashing: The app sends anonymized gait data to the Node.js backend, which generates a SHA-256 hash representing the behavioral pattern. 3. Dual Backend Verification: The system runs parallel checks on both the Node.js backend and the ICP blockchain backend, returning confidence scores, authentication success/failure, and match history. 4. Dashboard Insights: A modern React Native dashboard shows live sensor data, recent hashes, backend health, and system metrics.
 
-Your project is live at:
+We use React Native for cross-platform mobile development, Express.js for a lightweight backend, and ICP for advanced behavioral storage and validation.
 
-**[https://vercel.com/drushti-surkars-projects/v0-hash-gait-observability-dashboard](https://vercel.com/drushti-surkars-projects/v0-hash-gait-observability-dashboard)**
+⸻
 
-## Build your app
+Scope of Solution
 
-Continue building your app on:
+The proposed solution can be used in: • Fraud prevention: Passively verifying users to detect suspicious activity. • Silent KYC: Authenticating customers during onboarding without manual ID upload. • Continuous authentication: Ensuring session integrity beyond initial login. • Transaction security: Adding behavioral checks for high-value actions. • Financial inclusion: Extending biometric security to populations without physical biometric hardware.
 
-**[https://v0.dev/chat/projects/a1XqKn8kD2N](https://v0.dev/chat/projects/a1XqKn8kD2N)**
+Importantly, HashGait is hardware-agnostic — it works on any smartphone with motion sensors, without requiring new devices or complex installations.
 
-## How It Works
+⸻
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Additional Details
+
+HashGait’s innovation lies in its combination of behavioral biometrics with cryptographic rigor, packaged in an end-to-end system ready for real-world use. It balances: • Security: via non-reversible hashes and blockchain-backed records. • Usability: no additional hardware or active user effort. • Scalability: simple backend that can be cloud-deployed or integrated into existing bank APIs. • Innovation: bridges real-time behavioral data and decentralized trust mechanisms.
+
+This approach aligns perfectly with the hackathon’s goals of building secure, scalable, and innovative solutions for the banking and fintech ecosystem.
